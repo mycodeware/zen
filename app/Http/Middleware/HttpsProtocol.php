@@ -16,8 +16,10 @@ class HttpsProtocol
     public function handle($request, Closure $next)
     {
         if (config('app.env') === 'production' || config('app.env') === 'staging') {
+           
             if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] != 'https') {
                 return redirect()->secure($request->getRequestUri());
+
             }
         }
         return $next($request);

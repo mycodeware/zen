@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="matches_dv">
         <div class="row justify-content-center mb-3">
             <div class="col-md-3 col-sm-6 col-10 px-1 mb-2 mb-md-0" v-for="(type, key) in types">
-                <button type="button" class="btn btn-info btn-block h-100" v-on:click="selectType(key)">{{ type }}</button>
+                <button type="button" class="button_green btn btn-info btn-block h-100" v-on:click="selectType(key)">{{ type }}</button>
             </div>
         </div>
         <h3 class="mt-5">{{ selected_display }}</h3>

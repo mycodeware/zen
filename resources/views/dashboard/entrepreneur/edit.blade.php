@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
+<div class="clearfix"></div>
+    <!-- Start Home -->
+  <section class="sub-header text-center" style="background-image:url({{ url('img/sh-about.jpg') }})">   
+    <div class="container">
+        <h3 class="text-capitalize">Dashboard</h3>
+    </div>
+  </section>
+<section class="about_outer s_dashboard_wrapper">
+    <div class="container">
     <div class="row justify-content-center mt-4">
         @if (session('message_error'))
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -10,7 +18,7 @@
         @endif
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <!-- <div class="card-header">Dashboard</div> -->
 
                 <div class="card-body">
                     <form action="{{ url('dashboard') }}" method="post" id="form-edit">
@@ -405,4 +413,5 @@
 </div>
 @component('components.investment_round_modal')
 @endcomponent
+</section>
 @endsection

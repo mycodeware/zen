@@ -1,12 +1,32 @@
-<div>
-    <div class="lead my-3">{{ __('Privacy Policy') }}</div>
-    <div class="small">
+@extends('layouts.app')
+
+@section('content')
+    <div class="clearfix"></div>
+
+
+
+    <!-- Start Home -->
+
+  <section class="sub-header text-center" style="background-image:url({{url('img/terms.jpg')}})">
+    
+    <div class="container">
+        
+                    <span>COMPANY PROFILE</span>
+                    <h3 class="text-capitalize">{{ __('Privacy Policy') }}</h3>
+    </div>
+
+  </section>
+<section class="content_outer">
+    <div class="container">
+        <div class="row">
+    
+    <div class="">
         <p>{{ __('And Africa Co., Ltd.‏ is a private limited company incorporated under the law of Japan having its registered office at 6-11-13 Kamirenjaku, Mitaka, Tokyo, Japan. Any reference to "ZenVentures", "we", "our", "us" or “the Company”, shall include our employees, officers, directors, representatives, agents, shareholders, affiliates, subsidiaries, holding companies, related entities, advisers, sub-contractors, service providers and suppliers. We own, operate and provide certain services on the website: https://zenventures.co.za/  (the "Website").') }}</p>
         <p>{{ __('This document ("Policy") constitutes a legal agreement between you (referred to "you", "your" or "user"), as the user of the Website, and And Africa, as the owner of the Website. This Policy is only applicable to the Users of the Website, and the information and data gathered from the Users directly and not to any other information or website. You are hereby advised to read this Policy carefully and fully understand the nature and purpose of gathering and/or collecting sensitive, personal and other information and the usage, disclosure and sharing of such information.') }}</p>
         <p>{{ __('This Policy sets out the practices and policies for the protection of personal information (including sensitive personal data or information) collected, received, possessed, stored, dealt with or handled by And Africa.') }}</p>
         <p>{{ __('By using any of the ZenVentures websites you acknowledge that you have read and are bound by the following Policy, as well as any other ZenVentures’ network usage agreements that may govern your conduct.') }}</p>
     </div>
-    <div class="small list-decimal-inherit">
+    <div class=" list-decimal-inherit">
         <ol class="list-decimal-inherit-first">
             <li>{{ __('Applicability') }}
                 <ol>
@@ -94,7 +114,7 @@
             </li>
             <li>{{ __('Cookies') }}
                 <ol>
-                    <li>{{ __('Cookies are small files that reside on Your computer‘s hard drive and generally contain an anonymous unique identifier and are accessible only by the website that placed them there and not any other sites (Cookies).Some of Our web pages and services may also utilize Cookies and other tracking technologies to collect information about Your general internet usage.') }}
+                    <li>{{ __('Cookies are  files that reside on Your computer‘s hard drive and generally contain an anonymous unique identifier and are accessible only by the website that placed them there and not any other sites (Cookies).Some of Our web pages and services may also utilize Cookies and other tracking technologies to collect information about Your general internet usage.') }}
                     </li>
                     <li>{{ __('You may refuse to accept Cookies by activating the setting on Your browser which allows You to refuse the setting of Cookies. However, if You select this setting You may be unable to access certain parts of Our platform. Unless You have adjusted Your browser setting so that it will refuse Cookies, Our system may issue Cookies when You log on to the platform. The use of Cookies by Our partners, affiliates, advertisers or service providers is not covered by the Policy.') }}
                     </li>
@@ -260,4 +280,7 @@
             </li>
         </ol>
     </div>
-</div>
+   </div>
+    </div>
+</section>
+@endsection

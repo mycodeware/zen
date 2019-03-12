@@ -1,34 +1,37 @@
 <template>
     <div>
-        <table class="table">
-            <tbody>
-                <tr class="" v-for="row_data in data">
-                    <th class="w-25 text-right">{{ row_data.published_at | moment }}</th>
-                    <td class="w-75 text-left">{{ row_data.text }}</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="row mt-2">
-            <div class="col-6 text-left">
-                <div class="btn btn-light btn-sm" :class="{disabled: current_page <= 1}">
-                    <a @click="change(current_page - 1)" class="" aria-label="Previous">
-                        <span aria-hidden="true">&larr; Newer Posts</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 text-right">
-                <div class="btn btn-light btn-sm" :class="{disabled: current_page >= last_page}">
-                    <a @click="change(current_page + 1)" class="" aria-label="Next">
-                        <span aria-hidden="true">Older Posts &rarr;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+        <div class="whts_nw_wrpr whts_nw_wrpr2">
+            <div class="row">
+                <div class="col-md-6 col-sm-6" v-for="row_data in data">
+                  <div class="dt_txt">
+                    <span>{{ row_data.published_at | moment }}</span>
+                    <p>{{ row_data.text }}</p>
+                  </div>
+                  </div>
             </div>
         </div>
+        
+        <div class="mr_pst text-center">
+
+      <div class="row">
+
+        <div class="col-sm-6 col-xs-6 text-left" :class="{disabled: current_page >= last_page}">
+
+      <a @click="change(current_page + 1)">Older Posts</a>
+
+    </div>
+
+        <div class="col-sm-6 col-xs-6 text-right" :class="{disabled: current_page <= 1}">
+
+      <a @click="change(current_page - 1)">Newer Posts</a>
+
+    </div>
+
+    </div>
+
+    </div>
     </div>
 </template>
-
 <script>
     import moment from 'moment';
     export default {
@@ -44,7 +47,7 @@
         },
         methods: {
             getPosts: function(page) {
-                axios.get("/api/getPosts?page="+page)
+                axios.get("api/getPosts?page="+page)
                     .then(response => {
                         this.data = response.data.data;
                         this.current_page = response.data.current_page;

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="oppor_checkbox">
         <div v-for="(purpose, index) in purposes" class="form-check form-check-inline" v-show="show[index]">
             <input class="form-check-input" type="checkbox" name="purposes[]" v-bind:value="index" v-model="checkedPurposes">
             <label class="form-check-label">{{ purpose }}</label>

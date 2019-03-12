@@ -1,16 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row justify-content-center text-center">
+<div class="clearfix"></div>
+    <!-- Start Home -->
+  <section class="sub-header text-center" style="background-image:url({{ url('img/sh-about.jpg') }})">   
+    <div class="container">
+        <h3 class="text-capitalize">Dashboard</h3>
+    </div>
+  </section>
+<section class="about_outer s_dashboard_wrapper">
+    <div class="container">
+    <!-- <div class="row justify-content-center text-center">
         <div class="alert alert-warning" role="alert">
             <h5>{{ __('Beta version - You can use for free from Dec., 2018 to the end of Feb., 2019 !') }}</h5>
         </div>
-    </div>
+    </div> -->
     <div class="row justify-content-center mt-4">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <!-- <div class="card-header">Dashboard</div> -->
 
                 <div class="card-body">
                     <div class="pb-3">
@@ -171,4 +179,5 @@
         </div>
     </div>
 </div>
+</section>
 @endsection

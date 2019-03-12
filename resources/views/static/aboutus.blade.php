@@ -1,7 +1,274 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid bg-white">
+<div class="clearfix"></div>
+
+
+
+    <!-- Start Home -->
+  
+  <section class="sub-header text-center" style="background-image:url({{ url('img/sh-about.jpg') }})">   
+    <div class="container">
+        
+                    <span>COMPANY PROFILE</span>
+                    <h3 class="text-capitalize">about us</h3>
+    </div>
+
+  </section>
+  
+<section class="about_outer">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5"><img src="{{ url('img/creative-proccess.jpg') }}"></div>
+            <div class="col-md-7">
+                <div class="about_inner">
+                    
+                <h3 class="text-capitalize">{{ __('About ZenVentures') }}</h3>
+                <img src="{{ url('img/main1.png') }}" alt="" class="comp_logo">
+                <p>{!! __('ZenVentures is an online and offline entrepreneurship ecosystem created and managed by <a href="https://en.andafrica.co.jp/">And Africa Co., Ltd.</a>') !!} {{ __('We support all types of startups, investors, and professionals by providing a platform to connect, raise capital, find talent and be inspired.  Companies, investors, entrepreneurs or job seekers can register to our platform to connect with each other in a curated ecosystem that ensures safety, reliability and support.') }} </p>
+               
+                </div>
+            </div>
+        </div>
+                    
+    </div>
+
+  </section>
+  <section class="bg-counter-h1">
+                <div class="container">
+                    <div class="row">
+                        <div class="bnr_blk_otr">
+
+      <div class="row">
+
+        <div class="col-sm-4">
+
+          <div class="bnr-block_frst">
+
+            <div class="mbr-blk">
+
+              <div class="mbr-img">
+
+                <img src="{{ url('img/icon-3.png') }}">
+
+              </div>
+
+              <div class="mbr-cont">
+
+                <h3>50,236</h3>
+
+                <p>Total Registration</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-4">
+
+          <div class="bnr-block_frst">
+
+            <div class="mbr-blk">
+
+              <div class="mbr-img">
+
+                <img src="{{ url('img/icon-1.png') }}">
+
+              </div>
+
+              <div class="mbr-cont">
+
+                <h3>50,236</h3>
+
+                <p>Total Community</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-4">
+
+          <div class="bnr-block_frst">
+
+            <div class="mbr-blk">
+
+              <div class="mbr-img">
+
+                <img src="{{ url('img/icon-2.png') }}">
+
+              </div>
+
+              <div class="mbr-cont">
+
+                <h3>50,236</h3>
+
+                <p>Total Matches Made</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+                    </div>
+                </div>
+            </section>
+  
+  
+    
+    <section class="team_outer">
+            <div class="container">
+                <div class="row">
+                    <div class="title_bar"><h2>{{ __('Meet the team') }}</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                    <div class="box">
+                        <div class="image">
+                            @php $file = 'img/yo.png' @endphp
+                            <a><img src="{{ asset($file) }}?{{ File::lastModified(public_path($file)) }}" alt="Yo Murofushi" class="img-fluid"></a>
+                            <div class="social_icon">
+                                <ul>
+                                   
+                                     <li><a href="https://www.linkedin.com/in/yo-murofushi-234615140/"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.facebook.com/yo.murofushi.1"><i class="fa fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                                                    
+                        <div class="info">
+                            <h5><a href="#"> {{ __('Yo Murofushi') }}</a>  </h5>
+                            <p>Founder & CEO </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="box">
+                        <div class="image">
+                            @php $file = '/img/buntu.png' @endphp                            
+                            <a ><img src="{{ asset($file) }}?{{ File::lastModified(public_path($file)) }}" alt="Buntu Majaja" class="img-fluid"></a>
+                            <div class="social_icon">
+                                <!--<ul>
+                                   
+                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                </ul>-->
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h5><a href="#">{{ __('Buntu Majaja') }}</a></h5>
+                            <p>Executive </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box">
+                        <div class="image">
+                            @php $file = '/img/nicolas.png' @endphp                        
+                            <a href="#"><img src="{{ asset($file) }}?{{ File::lastModified(public_path($file)) }}" alt="Nicolas du Bois" class="img-fluid"></a>
+                            <div class="social_icon">
+                                <ul>                                   
+                                     <li><a href="https://www.linkedin.com/in/nicolas-du-bois-41aaa325/"><i class="fa fa-linkedin"></i></a></li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h5><a href="#">{{ __('Nicolas du Bois') }}</a></h5>
+                            <p>Executive </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="box">
+                        <div class="image">
+                        @php $file = '/img/masa.png' @endphp                        
+                            <a><img src="{{ asset($file) }}?{{ File::lastModified(public_path($file)) }}" alt="Masa Tanaka" class="img-fluid"></a>
+                            <div class="social_icon">
+                                <ul>
+                                   <!--
+                                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h5><a href="#">{{ __('Masa Tanaka') }}</a></h5>
+                            <p>Executive </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                </div>
+            </div>
+    </section>
+    
+    <section class="about_outer">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="about_inner">
+                <h3 class="text-capitalize">{{ __('About And Africa') }}</h3>
+                <img src="{{ url('img/yoko_c.png') }}" class="comp_logo">
+                <p>{{ __('And Africa is a consulting and investment advisory firm located in Tokyo, Japan with a branch office in South Africa.  Our vision is to be a bridge between Japan, other developed nations, and African countries. Japan has knowledge, technology and capital, but a declining population and stagnating economy. African countries are dynamic and growing rapidly, but lack jobs, technology and capital. We aim to match the needs of both regions to create sustainable and innovative partnerships.') }} </p>
+                <p>{{ __('And also to create exponential growth opportunities for Japanese companies, investors.') }}</p>
+                <p>{{ __('And our mission is to promote industrialization and job creation in Africa.') }}</p>
+                 
+                </div>
+            </div>
+            <div class="col-md-7"><img src="{{ url('img/about.jpg') }}" class="mar_t30"></div>
+            
+        </div>
+                    
+    </div>
+
+  </section>
+  <section class="about_outer2">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="about_inner2">
+                    <img src="{{ url('img/about2.png') }}">
+                    <ul>
+                        <li>{{ __('Industrialization, and contribute to job creation in Africa') }}</li>
+                        <li>{{ __('Development of efficient African start-up ecosystem') }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="about_inner2">
+                    <img src="{{ url('img/about3.png') }}">
+                    <ul>
+                        <li>{{ __('Create exponential growth opportunities') }}</li>
+                        <li>{{ __('Develop innovative partnerships') }}</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+                    
+    </div>
+
+  </section>    
+<!--<div class="container-fluid bg-white">
     <div class="px-3 px-md-5 py-3 py-md-5">
         <div class="lead my-3">{{ __('About Us') }}</div>
         <div class="mb-5 pt-3">
@@ -115,5 +382,5 @@
             </address>
         </div>
     </div>
-</div>
+</div>-->
 @endsection
