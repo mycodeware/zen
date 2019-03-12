@@ -5,8 +5,20 @@
 // Variables
 @import 'variables';
 
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "~owl.carousel/dist/assets/owl.carousel.min";
+@import "~font-awesome/css/font-awesome.min";
+@import "all";
+@import "bootsnav";
+@import "animate";
+@import "main";
+
+
+
 
 html {
   font-size: 1rem;
