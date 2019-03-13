@@ -1,23 +1,15 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 @import "~owl.carousel/dist/assets/owl.carousel.min";
 @import "~font-awesome/css/font-awesome.min";
-@import "all";
-@import "bootsnav";
 @import "animate";
 @import "main";
-
-
 
 
 html {
@@ -29,7 +21,6 @@ html {
     font-size: 1.2rem;
   }
 }
-
 @include media-breakpoint-up(md) {
   html {
     font-size: 1.4rem;
